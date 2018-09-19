@@ -1,6 +1,7 @@
 clientList = 0
 moneyList = 0
 ticketAmount = 0
+verify = False
 def addmoney(client,money):
     if client in clientList:
         i = 0

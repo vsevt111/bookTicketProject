@@ -1,4 +1,4 @@
-import database
+import clientRegister
 
 dateList = ['15', '23', '25', '1']
 amount = [200, 150, 500, 250]
@@ -19,6 +19,9 @@ def cancel(dates):
             i = i+1
         amount[i] = amount[i]+1
     return "700 cancel complete"+amount[i]
+
+def verify():
+    clientRegister.verify = True
 
 def showstatus():
     return "600 status of all concert"
