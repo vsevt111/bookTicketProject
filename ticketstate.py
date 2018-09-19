@@ -26,8 +26,10 @@ def cancel(dates):
     else:
         return "750 fail to cancel"
 
-def verify():
+def verify(client,money):
     clientRegister.verify = True
+    clientRegister.submoney(client, money)
+    return "700 vertify complete. Thank you"
 
 def showstatus():
     return "600 status of all concert"
