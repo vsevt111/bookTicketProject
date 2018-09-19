@@ -1,4 +1,4 @@
-clientList = 0
+clientList = []
 moneyList = 0
 ticketAmount = 0
 verify = False
