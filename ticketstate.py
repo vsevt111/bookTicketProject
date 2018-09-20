@@ -11,7 +11,7 @@ class ticketstate():
             while self.dateList[i] != self.dates:
                 i = i + 1
             self.amountTicket[i] = self.amountTicket[i] - 1
-            return "700 booking complete. date" + self.dateList[i] + "have" + str(amountTicket[i])
+            return "700 booking complete. date" + self.dateList[i] + "have " + str(self.amountTicket[i])
         else:
             return "750 fail to booking"
 
@@ -27,4 +27,5 @@ class ticketstate():
 
     def showstatus(self):
         return "600 status of all concert"
+
 

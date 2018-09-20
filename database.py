@@ -10,3 +10,4 @@ class database():
             return "700 sign up complete"
         else:
             return "750 fail to sign up because this username already exist."
+
