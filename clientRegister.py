@@ -1,5 +1,5 @@
 clientList = []
-moneyList = 0
+moneyList = []
 ticketAmount = 0
 verify = False
 def addmoney(client,money):
