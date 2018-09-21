@@ -2,6 +2,10 @@ class database():
     moneyDictionary = {}
     clientDictionary = {}
     loginList = []
+    def __init__(self):
+        loginList=[]
+        clientDictionary = {}
+        moneyDictionary = {}
 
     def signup(self, name, password):
         if self.clientDictionary.get(name, '0') == '0':

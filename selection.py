@@ -1,8 +1,5 @@
-import ticketstate
-
-
+from ticketstate import *
 class selection(ticketstate):
-
     def selectzone(self, number):
         if number == 0:
             return "700 select zone complete" + "your zone is "+self.zone[number]

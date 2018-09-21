@@ -1,6 +1,10 @@
-from Userstate import Userstate
-from ticketstate import ticketstate
+# //////////////////////////////////////////
+#     Init this class on server Only
+# ////////////////////////////////////////// 
 
+
+from userstate import *
+from ticketstate import *
 
 class clientRegister(Userstate, ticketstate):
     def __init__(self):

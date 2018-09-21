@@ -1,11 +1,12 @@
-from database import database
-
-
+from database import *
 class Userstate(database):
     loginboolean = False
     name = ''
     password = ''
 
+    def __init__(self,name,password):
+        self.name=name
+        self.password=password
     def login(self, name, password):
         if self.clientDictionary.get(name, '0') != '0' and self.clientDictionary.get(name) == password:
             self.loginboolean = True
@@ -13,6 +14,7 @@ class Userstate(database):
             return "700 log in complete"
         else:
             return "750 fail to log in. You may not sign up."
+
 
     def logout(self, name):
         if name in self.loginList:

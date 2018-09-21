@@ -1,12 +1,13 @@
-from socket import*
-serverName = input("insert server name")
-serverPort = int(input("insert port number"))
+import socket
+import clientRegister
 
-while(True):
-    clientSocket = socket(AF_INET,SOCK_STREAM)
-    clientSocket.connect((serverName,serverPort))
-    sentence = input("Input lowercase sentence:")
-    clientSocket.send(sentence.encode())
-    modifiedSentence = clientSocket.recv(1024)
-    print("From Server:", modifiedSentence.decode())
-    clientSocket.close()
+port = 5565
+s=socket.socket()
+s.connect(('localhost',port))
+message=''
+while True:
+    print(s.recv(2048).decode("utf-8"))
+    message = input('-> ')
+    s.send(message.encode('utf-8'))
+s.close()
+
