@@ -11,15 +11,15 @@ class Userstate(database):
         if self.clientDictionary.get(name, '0') != '0' and self.clientDictionary.get(name) == password:
             self.loginboolean = True
             self.loginList.append(name)
-            return "700 log in complete"
+            return "log in complete"
         else:
-            return "750 fail to log in. You may not sign up."
+            return "fail to log in. You may not sign up. Or Incorrect Password"
 
 
     def logout(self, name):
         if name in self.loginList:
             self.loginboolean = False
             self.loginList.remove(name)
-            return "700 log out complete"
+            return "log out complete"
         else:
-            return "705 interrupt with other"
+            return "interrupt with other"

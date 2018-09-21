@@ -1,10 +1,6 @@
-# //////////////////////////////////////////
-#     Init this class on server Only
-# ////////////////////////////////////////// 
-
-
 from userstate import *
 from ticketstate import *
+
 
 class clientRegister(Userstate, ticketstate):
     def __init__(self):
@@ -30,7 +26,7 @@ class clientRegister(Userstate, ticketstate):
 
     def status(self,name):
         if self.loginboolean:
-            return "600 show your status " + name + "\n" + "MONEY: " + str(self.moneyDictionary.get(name))
+            return "600 show your status" + name + "\n" + "MONEY:" + str(self.moneyDictionary.get(name))
         else:
             return "750 fail to show your status"
 
@@ -38,4 +34,3 @@ class clientRegister(Userstate, ticketstate):
         self.verifyTicket = True
         self.submoney(client, money)
         return "700 vertify complete. Thank you"
-
